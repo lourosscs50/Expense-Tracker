@@ -1,15 +1,51 @@
-# 🧾 Expense Tracker (Python Console App)
+A modular command-line expense tracking application built in Python that supports persistent storage, transaction filtering, balance computation, and category-based aggregation with optional data visualization.
 
-This is a simple Python command-line application that allows you to:
+This project demonstrates structured CLI design, file persistence, data transformation, and analytical reporting logic.
 
-- Track expenses and incomes
-- View your balance
-- Save transactions to a local file
+The Expense Tracker allows users to:
 
-## 🔧 How to Run
+Record income and expenses
 
-1. Clone or download the project
-2. Run `EXPENSE_rUS.py` using Python 3
+Persist data across sessions
 
-```bash
-python EXPENSE_rUS.py
+Calculate account balance dynamically
+
+Filter transactions by category
+
+Aggregate spending by category
+
+Visualize category spending via bar chart
+
+This project models a simplified personal finance management system with extendable architecture for database or web integration.
+
+
+Program Start
+      ↓
+Load existing transactions
+      ↓
+Display interactive menu
+      ↓
+User action
+      ↓
+State update (if needed)
+      ↓
+Persist to file
+      ↓
+Repeat until exit
+
+
+main()
+ ├── load_expenses()
+ ├── show_menu()
+ ├── add_transaction()
+ ├── view_balance()
+ ├── view_transactions()
+ ├── filter_by_category()
+ ├── export_to_csv() [planned]
+ └── show_category_chart()
+
+ Example:
+
+Groceries|45.90|Food
+Gas|30.00|Transport
+Freelance|500.00|Income
